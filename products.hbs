@@ -1,0 +1,43 @@
+<h1 align="center"> My Products</h1>
+<div class="add"><a href="products/new" type="button" title="Add new"><i class="fas fa-cart-plus fa-2x"></i>
+  </a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr align="center">
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each prodDB}}
+          <form action="/products/edit/:id" method="post">
+            <tr>
+              <th scope="row">{{id}}</th>
+              <td>{{name}}</td>
+              <td>{{category}}</td>
+              <td>{{description}}</td>
+              <td>{{price}}</td>
+              <td>
+                <input type="hidden" name="id" value="{{id}}" />
+                <button type="submit" class="btn btn-info" name="edit" title="Edit"><i class="fas fa-edit"></i></button>
+                <button type="submit" class="btn btn-warning" name="delete" title="Delete"
+                  formaction="/products/delete"><i class="fas fa-trash"></i></button>
+                <button type="submit" class="btn btn-success" name="view" title="View"
+                  formaction="/products/show/:id"><i class="fas fa-eye"></i></button>
+              </td>
+            </tr>
+          </form>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

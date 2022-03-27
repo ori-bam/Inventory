@@ -1,0 +1,41 @@
+<h1 align="center"> My Orders</h1>
+<div class="add"><a href="/orders/new" type="button" title="Add new"><i class="far fa-calendar-plus fa-2x"></i>
+  </a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr align="center">
+            <th scope="col">Ticket</th>
+            <th scope="col">Date</th>
+            <th scope="col">To</th>
+            <th scope="col">Total</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each ordDB}}
+          <form action="/orders/edit/:id" method="post">
+            <tr>
+              <th scope="row">{{id}}</th>
+              <td>{{date}}</td>
+              <td>{{to}}</td>
+              <td>{{total}}</td>
+              <td>
+                <input type="hidden" name="id" value="{{id}}" />
+                <button type="submit" class="btn btn-info" name="edit" title="Edit"><i class="fas fa-edit"></i></button>
+                <button type="submit" class="btn btn-warning" name="delete" title="Delete"
+                  formaction="/orders/delete"><i class="fas fa-trash"></i></button>
+                <button type="submit" class="btn btn-success" name="view" title="View" formaction="/orders/show/:id"><i
+                    class="fas fa-eye"></i></button>
+              </td>
+            </tr>
+          </form>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

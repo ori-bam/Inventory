@@ -1,0 +1,40 @@
+<div class="container" align="center">
+    <form action="/orders/edit" method="POST">
+        <h2 align="center">Edit Order</h2>
+        <div class="col" align="center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <label for="first" style="color: cornflowerblue;">Ticket</label>
+                    <input type="text" class="form-control" placeholder="" name="id" value="{{id}}">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="date"  style="color: cornflowerblue;">Date</label>
+                    <input type="text" class="form-control" placeholder="" name="date" value="{{date}}"
+                       >
+                </div>
+            </div>
+      
+                  <div class="col-md-6">
+                <div class="form-group">
+                    <label for="to"  style="color: cornflowerblue;">To</label>
+                    <input type="text" class="form-control" placeholder="" name="to" value="{{to}}">
+                </div>
+            </div>
+                  <div class="col-md-6">
+                <div class="form-group">
+                    <label for="total"  style="color: cornflowerblue;">Total</label>
+                    <input type="text" class="form-control" placeholder="" name="total" value="{{total}}">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+    </form>
+</div>
+<br>

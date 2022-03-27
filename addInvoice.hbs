@@ -1,0 +1,52 @@
+<div class="container" align="center">
+    <form action="/invoices/add" method="POST">
+        <h2 align="center">Add Invoice</h2>
+        <div class="col" align="center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <label for="first" style="color: cornflowerblue;">Date</label>
+                    <input type="text" class="form-control" placeholder="01/01/1970" name="date" value="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="To"  style="color: cornflowerblue;">To</label>
+                    <input type="text" class="form-control" placeholder="" name="to" value=""
+                       >
+                </div>
+            </div>
+      
+                  <div class="col-md-6">
+                <div class="form-group">
+                    <label for="payment"  style="color: cornflowerblue;">Payment</label>
+                    <input type="text" class="form-control" placeholder="" name="payment" value="">
+                </div>
+            </div>
+                         <div class="col-md-6">
+                <div class="form-group">
+                    <label for="quantity"  style="color: cornflowerblue;">Quantity</label>
+                    <input type="text" class="form-control" placeholder="" name="quantity" value="">
+                </div>
+            </div>
+                         <div class="col-md-6">
+                <div class="form-group">
+                    <label for="description"  style="color: cornflowerblue;">Description</label>
+                    <input type="text" class="form-control" placeholder="" name="description" value="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="total"  style="color: cornflowerblue;">Total</label>
+                    <input type="text" class="form-control" placeholder="" name="total" value="">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+    </form>
+</div>
+<br>

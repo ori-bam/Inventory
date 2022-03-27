@@ -1,0 +1,47 @@
+<h1 align="center"> My Invoices</h1>
+<div class="add"><a href="/invoices/new" type="button" title="Add new"><i class="fas fa-file-plus fa-2x"></i>
+  </a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr align="center">
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">To</th>
+            <th scope="col">Payment</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Description</th>
+            <th scope="col">Total</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each invDB}}
+          <form action="/invoices/edit/:id" method="post">
+            <tr>
+              <th scope="row">{{id}}</th>
+              <td>{{date}}</td>
+              <td>{{to}}</td>
+              <td>{{payment}}</td>
+              <td>{{quantity}}</td>
+              <td>{{description}}</td>
+              <td>{{total}}</td>
+              <td>
+                <input type="hidden" name="id" value="{{id}}" />
+                <button type="submit" class="btn btn-info" name="edit" title="Edit"><i class="fas fa-edit"></i></button>
+                <button type="submit" class="btn btn-warning" name="delete" title="Delete"
+                  formaction="/invoices/delete"><i class="fas fa-trash"></i></button>
+                <button type="submit" class="btn btn-success" name="view" title="View"
+                  formaction="/invoices/show/:id"><i class="fas fa-eye"></i></button>
+              </td>
+            </tr>
+          </form>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container" align="center">
+    <form action="/products/add" method="POST">
+        <h2 align="center">Add Product</h2>
+        <div class="col" align="center">
+            <div class="col-md-6">
+                <div class="form-group">
+         
+                    <label for="first" style="color: cornflowerblue;">Name</label>
+                    <input type="text" class="form-control" placeholder="" name="name" value="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="category"  style="color: cornflowerblue;">Category</label>
+                    <input type="text" class="form-control" placeholder="" name="category" value="" >
+                </div>
+            </div>
+      
+                  <div class="col-md-6">
+                <div class="form-group">
+                    <label for="price"  style="color: cornflowerblue;">Price</label>
+                    <input type="text" class="form-control" placeholder="" name="price" value="">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="picture"  style="color: cornflowerblue;">Picture</label>
+                    <input type="text" class="form-control" id="phone" placeholder="/public/images/example.jpg"
+                        name="picture" value="">
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="col-md-6"> <label for="description"  style="color: cornflowerblue;">Description</label>
+                <div class="form-group">
+                    <textarea name="description" id="" cols="50" rows="5"
+                        placeholder="Product description here.."></textarea>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+    </form>
+</div>
+<br>
